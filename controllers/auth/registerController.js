@@ -69,11 +69,13 @@ const registerController = {
       access_token = JwtService.sign({
         _id: result._id,
         username: result.username,
+        isAdmin: result.isAdmin,
       });
       refresh_token = JwtService.sign(
         {
           _id: result._id,
           username: result.username,
+          isAdmin: result.isAdmin,
         },
         "1y",
         REFRESH_SECRET

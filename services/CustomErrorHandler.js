@@ -24,6 +24,24 @@ class CustomErrorHandler extends Error {
   static serverError(message = "Internal server error") {
     return new CustomErrorHandler(500, message);
   }
+
+  static usernameNotAvailable(message = "This username is not available!") {
+    return new CustomErrorHandler(409, message);
+  }
+
+  static fileUploadingError(
+    message = "Something went wrong while uploading images"
+  ) {
+    return new CustomErrorHandler(500, message);
+  }
+
+  static usernameTaken(message = "This username is taken!") {
+    return new CustomErrorHandler(409, message);
+  }
+
+  static objectIdNotValid(message = "Object id is not valid!") {
+    return new CustomErrorHandler(400, message);
+  }
 }
 
 export default CustomErrorHandler;

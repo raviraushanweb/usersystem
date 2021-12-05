@@ -59,11 +59,13 @@ const loginController = {
       access_token = JwtService.sign({
         _id: user._id,
         username: user.username,
+        isAdmin: user.isAdmin,
       });
       refresh_token = JwtService.sign(
         {
           _id: user._id,
           username: user.username,
+          isAdmin: user.isAdmin,
         },
         "1y",
         REFRESH_SECRET
