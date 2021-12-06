@@ -8,4 +8,10 @@ export const {
   DEBUG_MODE,
   JWT_SECRET,
   REFRESH_SECRET,
+  APP_NAME,
+  EMAIL_SECRET,
+  EMAIL_HOST,
+  EMAIL_USERNAME,
+  EMAIL_PASSWORD,
+  SMTP_PORT,
 } = process.env;

@@ -14,6 +14,7 @@ const userSchema = new Schema(
     isSocial: { type: Boolean, default: false },
     isAdmin: { type: Boolean, default: false },
     isHidden: { type: Boolean, default: false },
+    isVerified: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
