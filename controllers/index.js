@@ -9,6 +9,7 @@ export { default as usernameCheck } from "./profile/usernameCheck";
 export { default as verifyProfile } from "./profile/verifyProfile";
 export { default as forgotPassword } from "./profile/forgotPassword";
 export { default as resetPassword } from "./profile/passwordReset";
+export { default as isVerified } from "./profile/isVerified";
 
 export { default as follow } from "./social/followController";
 export { default as unfollow } from "./social/unfollowController";

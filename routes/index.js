@@ -13,6 +13,7 @@ import {
   verifyProfile,
   forgotPassword,
   resetPassword,
+  isVerified,
 } from "../controllers";
 
 import auth from "../middlewares/auth";
@@ -31,6 +32,7 @@ router.post("/profile/verifyProfile/:id", auth, verifyProfile.sendVerification);
 router.get("/confirmation/:token", verifyProfile.acceptVerification);
 router.post("/forgotPassword/", forgotPassword);
 router.post("/resetPassword/:id/:token", resetPassword);
+router.get("/isVerified/:id", isVerified);
 
 router.patch("/social/follow/:id", auth, follow.follow);
 router.patch("/social/unfollow/:id", auth, unfollow.unfollow);
